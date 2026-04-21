@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+*.pth
+data/tusimple/
+data/*.zip
+.vscode/
+outputs/*.jpg
+outputs/*.mp4
+*.db
+*.db-shm
+*.db-wal
