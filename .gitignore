@@ -5,8 +5,8 @@ __pycache__/
 data/tusimple/
 data/*.zip
 .vscode/
-outputs/*.jpg
 outputs/*.mp4
+outputs/pipeline_debug.jpg
 *.db
 *.db-shm
 *.db-wal
