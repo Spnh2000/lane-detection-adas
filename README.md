@@ -4,7 +4,9 @@ Real-time lane detection pipeline combining classical Computer Vision (OpenCV)
 with a deep learning segmentation model (U-Net CNN), targeting Autonomous
 Driving / ADAS applications.
 
-![Pipeline](outputs/pipeline_debug.jpg)
+## 🎬 Demo
+
+![Lane Detection Demo](outputs/demo_screenshot.jpg)
 
 ---
 
@@ -22,27 +24,22 @@ Driving / ADAS applications.
 ## 📦 Dataset
 
 [TuSimple Lane Detection](https://github.com/TuSimple/tusimple-benchmark)
-— 3,500+ annotated highway driving clips, standard ADAS benchmark.
+— 3,626 annotated highway driving clips, standard ADAS benchmark.
 
 ---
 
 ## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/lane-detection-adas.git
+git clone https://github.com/Spnh2000/lane-detection-adas.git
 cd lane-detection-adas
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Run preprocessing demo:
-```bash
-python3 src/preprocess.py
-```
-
 Run inference on a video:
 ```bash
-python3 src/detect.py --video data/your_video.mp4 --weights outputs/lanenet_best.pth
+python3 src/detect.py --video data/your_video.mp4 --weights outputs/lanenet_best.pth --output outputs/result.mp4
 ```
 
 ---
@@ -50,7 +47,7 @@ python3 src/detect.py --video data/your_video.mp4 --weights outputs/lanenet_best
 ## 🏋️ Training (Google Colab)
 
 Open `notebooks/train_colab.ipynb` in Google Colab (free T4 GPU).
-Trains in ~1 hour. Weights are saved to Google Drive automatically.
+Trains in ~1 hour. Best val loss achieved: **0.2842**
 
 ---
 
@@ -59,4 +56,4 @@ Trains in ~1 hour. Weights are saved to Google Drive automatically.
 
 ## 🛠️ Tech Stack
 
-`Python` `PyTorch` `OpenCV` `U-Net` `TuSimple` `ADAS`
+`Python` `PyTorch` `OpenCV` `U-Net` `TuSimple` `Google Colab` `ADAS`
